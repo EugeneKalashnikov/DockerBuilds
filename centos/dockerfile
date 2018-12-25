@@ -1,0 +1,6 @@
+FROM centos
+
+RUN yum update && yum install maven -y
+RUN yum install terraform -y
+RUN yum install azure-cli databricks-cli openssl jq -y
+RUN yum install angular-cli python3 -y

@@ -1,0 +1,12 @@
+FROM alpine:latest
+
+RUN  	apk update && apk add maven
+RUN	apk add terraform
+RUN 	apk add --update python make gcc g++ nodejs npm py-pip && \
+	pip install databricks-cli && \	
+	apk add --update openssl jq && \
+	npm install azure-cli && \
+	apk del py-pip 
+RUN	npm install angular-cli && apk add python3 && \
+	apk del make gcc g++ nodejs npm 
+ 
