@@ -1,2 +1,4 @@
 # DockerBuilds
-Docker builds
+/Jenkins_server - image for Jenkins server
+  Based on jenkins/jenkins:alpine
+
