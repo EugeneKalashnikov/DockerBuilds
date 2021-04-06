@@ -1,0 +1,87 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWpf>true</UseWpf>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>app-icon.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="big-rocket.png" />
+    <None Remove="close-button.png" />
+    <None Remove="close.png" />
+    <None Remove="document.png" />
+    <None Remove="error.png" />
+    <None Remove="finish.png" />
+    <None Remove="folder.png" />
+    <None Remove="Images\arrow.png" />
+    <None Remove="Images\calendar.png" />
+    <None Remove="line.png" />
+    <None Remove="logo.png" />
+    <None Remove="Properties\appsettings.json" />
+    <None Remove="Properties\AppSettings.settings" />
+    <None Remove="rocket.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\appsettings.json"> 
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory> 
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AppSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>AppSettings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="em" Version="1.4.1" />
+    <PackageReference Include="Micook" Version="15.0.4797.1003" />
+    <PackageReference Include="Mcrore" Version="15.0.0" />
+    <PackageReference Include="Togch" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
+    <Resource Include="Images\big-rocket.png" />
+    <Resource Include="Images\calendar.png" />
+    <Resource Include="Images\close-button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\document.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\finish.png" />
+    <Resource Include="Images\folder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\line.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\rocket.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\j" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\.Designer.cs">
+      <DesignTimeSharedInput>True</Designut>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Apgs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
