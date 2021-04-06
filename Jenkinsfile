@@ -13,9 +13,9 @@ branches.each {
 stages {
     stage ('test') {
         steps {
-        cleanWs()
             script{
                 echo "xxx"
+                
             }
         }
     }
